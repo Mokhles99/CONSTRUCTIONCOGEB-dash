@@ -1,0 +1,337 @@
+/* CSS adapté pour React */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.divnav {
+  margin-top: 80px;
+ 
+}
+
+.navDashboard {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+  margin-top: 70px fixed;
+}
+
+.navDashboard:hover {
+  width: 500px;
+  transition: 1s;
+}
+
+.logoadmin {
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logoadmin span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+
+.nav-link:hover {
+  background: #eee;
+}
+
+.nav-link:hover i {
+  color: #34af6d;
+  transition: 0.5s;
+}
+
+.dashLogo {
+  position: absolute;
+  display: flex;
+}
+
+.nav-item-Dash {
+  margin-left: 11px;
+  margin-top: 2px;
+}
+
+.logout {
+  position: absolute;
+  top: 300px;
+  display: flex;
+  margin-top: 300px;
+}
+
+.nav-item-LogOut {
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.LogoLogout {
+  margin-left: 33px;
+  font-size: 28px;
+  margin-right: 13px;
+}
+
+.nav-item-user {
+  margin-top: 33px;
+  margin-left: 11px;
+}
+
+.userLogo {
+  margin-top: 32px;
+  margin-left: 34px;
+  font-size: 28px;
+  margin-right: 13px;
+}
+
+.nav-item-msg {
+  margin-left: 8px;
+  margin-top: 15px;
+}
+
+.messageLogo {
+  position: absolute;
+  display: flex;
+}
+
+.msgLogo {
+  font-size: 32px;
+  margin-left: 33px;
+  margin-right: 13px;
+  margin-top: 14px;
+}
+
+.HotelLogo {
+  margin-left: 32px;
+  font-size: 29px;
+  margin-right: 13px;
+}
+
+.nav-item-hotel {
+  margin-left: 13px;
+  margin-top: 5px;
+}
+
+.hotelLogo {
+  position: absolute;
+  display: flex;
+  margin-top: 43px;
+}
+
+.VoyageLogo {
+  margin-left: 32px;
+  font-size: 27px;
+  margin-right: 29px;
+}
+
+.nav-item-voyages {
+  margin-top: 3px;
+}
+
+.voyagesLogo {
+  position: absolute;
+  display: flex;
+  margin-top: 57px;
+}
+
+.congresLogo {
+  position: absolute;
+  display: flex;
+  margin-top: 70px;
+}
+
+.CongresLogo {
+  margin-left: 33px;
+  font-size: 25px;
+  margin-right: 30px;
+}
+
+.reservLogo {
+  position: absolute;
+  display: flex;
+  margin-top: 94px;
+}
+
+.ReservLogo {
+  margin-left: 22px;
+  font-size: 25px;
+  margin-right: 30px;
+}
+
+.offresLogo {
+  position: absolute;
+  display: flex;
+  margin-top: 82px;
+}
+
+.OffresLogo {
+  margin-left: 30px;
+  font-size: 30px;
+  margin-right: 30px;
+}
+
+.containerDash {
+  display: flex;
+  /* background: rgb(226, 226, 226); */
+}
+
+/* Main Section */
+.main {
+  position: relative;
+  padding: 20px;
+  width: 85%;
+  margin-top: 100px;
+}
+
+.main-top {
+  display: flex;
+  width: 100%;
+}
+
+.attendance {
+  margin-top: 50px;
+  text-transform: capitalize;
+}
+
+.attendance-list {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #844a4a;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+table thead tr {
+  color: #fff;
+  background: #34af6d;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: #f3f3f3;
+}
+
+.table tbody tr.active {
+  font-weight: bold;
+  color: #4ad489;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #4ad489;
+}
+
+.table button {
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #4ad489;
+}
+
+.table button:hover {
+  background: #4ad489;
+  color: #fff;
+  transition: 0.5rem;
+}
+.logoadmin{
+  width: 20px !important;
+  height:  20px !important;
+}
+.ajout {
+  display: flex;
+  justify-content: space-between; /* Pour espacer les éléments sur la ligne */
+  align-items: center;
+}
+
+.accordion {
+  margin-top: auto; /* Pour déplacer l'accordéon en bas */
+  display: flex;
+  flex-direction: column; /* Pour afficher les éléments verticalement */
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pour aligner l'icône à droite */
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.accordion-header.open {
+  background-color: #f0f0f0;
+}
+
+.accordion-body {
+  padding: 10px;
+  margin-left: 74px;
+}
+
+.accordion-body ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.accordion-body li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.accordion-body li:hover {
+  color: #4ad489;
+}
+
+.link-hover:hover {
+  color: #34af6d;
+}
