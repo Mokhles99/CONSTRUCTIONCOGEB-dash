@@ -13,7 +13,7 @@ import { LiaPercentageSolid } from "react-icons/lia";
 import { FaWpforms, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import admin from '../../assets/hbib.jpg'
+
 const Sidebar = () => {
   
 

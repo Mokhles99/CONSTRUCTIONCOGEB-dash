@@ -68,7 +68,7 @@ const AboutTables = () => {
     aboutFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch('http://localhost:3005/about/create', {
+      const response = await fetch('${BASE_URL}/about/create', {
         method: 'POST',
         body: formData
       });
@@ -86,7 +86,7 @@ const AboutTables = () => {
     aboutFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch(`http://localhost:3005/about/update/${selectedAboutId}`, {
+      const response = await fetch(`${BASE_URL}/about/update/${selectedAboutId}`, {
         method: 'PUT',
         body: formData
       });

@@ -5,9 +5,9 @@ const path = require('path');
 
 // Configuration de Cloudinary
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET
+  cloud_name: 'dlp3bn4yr',
+  api_key: '241549437291335',
+  api_secret: 'Cn9oM8rXApFHPvsfOh7HNa5BL-0'
 });
 
 // Configuration du stockage avec Multer et Cloudinary

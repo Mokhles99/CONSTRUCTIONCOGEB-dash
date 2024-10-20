@@ -68,7 +68,7 @@ const CarouselTables = () => {
     carouselFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch('http://localhost:3005/carousel/create', {
+      const response = await fetch('${BASE_URL}/carousel/create', {
         method: 'POST',
         body: formData
       });
@@ -86,7 +86,7 @@ const CarouselTables = () => {
     carouselFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch(`http://localhost:3005/carousel/update/${selectedCarouselId}`, {
+      const response = await fetch(`${BASE_URL}/carousel/update/${selectedCarouselId}`, {
         method: 'PUT',
         body: formData
       });

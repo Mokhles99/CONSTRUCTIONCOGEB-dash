@@ -1,5 +1,5 @@
 import { productoneConstants } from './constantes';
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 // Action de création de produit
 export const createProductone = (productoneData) => (dispatch) => {
   dispatch({ type: productoneConstants.CREATE_PRODUCTONE_REQUEST });

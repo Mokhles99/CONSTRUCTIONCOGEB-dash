@@ -68,7 +68,7 @@ const CatalogueTables = () => {
     catalogueFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch('http://localhost:3005/catalogue/create', {
+      const response = await fetch('${BASE_URL}/catalogue/create', {
         method: 'POST',
         body: formData
       });
@@ -86,7 +86,7 @@ const CatalogueTables = () => {
     catalogueFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch(`http://localhost:3005/catalogue/update/${selectedCatalogueId}`, {
+      const response = await fetch(`${BASE_URL}/catalogue/update/${selectedCatalogueId}`, {
         method: 'PUT',
         body: formData
       });

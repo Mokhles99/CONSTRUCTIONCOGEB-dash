@@ -4,9 +4,9 @@ const router = express.Router();
 
 router.get('/:fileName', async (req, res) => {
     const fileName = req.params.fileName;
-    console.log('Cloudinary Cloud Name:', process.env.CLOUDINARY_CLOUD_NAME);
-    const fileUrl = `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/v1709559910/tests/${fileName}`;
-    console.log('Attempting to download file from URL:', fileUrl);
+   
+    const fileUrl = `https://res.cloudinary.com/dlp3bn4yr/image/upload/v1709559910/tests/${fileName}`;
+ 
     
 
     try {
