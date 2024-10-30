@@ -24,7 +24,7 @@ export const addToCarttwo = (cartId, productId, quantity = 1) => async (dispatch
     }
 
     try {
-        const response = await fetch(`${BASE_URL}/carttwo/${cartId}/add`, {
+        const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/${cartId}/add`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ productId, quantity })
@@ -48,7 +48,7 @@ export const addToCarttwo = (cartId, productId, quantity = 1) => async (dispatch
 export const getCarttwo = (cartId) => async (dispatch) => {
     dispatch({ type: carttwoConstants.GET_CARTTWO_REQUEST });
     try {
-        const response = await fetch(`${BASE_URL}/carttwo/${cartId}/getCarttwo`, {
+        const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/${cartId}/getCarttwo`, {
             method: 'GET'
         });
         const data = await response.json();
@@ -63,7 +63,7 @@ export const updateCartWithUserInfo = (cartId, userInfo) => async (dispatch) => 
     dispatch({ type: carttwoConstants.UPDATE_CARTTWO_REQUEST });
 
     try {
-        const response = await fetch(`${BASE_URL}/carttwo/${cartId}/userinfo`, {
+        const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/${cartId}/userinfo`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userInfo })
@@ -91,7 +91,7 @@ export const updateCartWithUserInfo = (cartId, userInfo) => async (dispatch) => 
 export const removeItemFromCart = (cartId, itemId) => async (dispatch) => {
     dispatch({ type: carttwoConstants.REMOVE_ITEM_FROM_CART_REQUEST });
     try {
-        const response = await fetch(`${BASE_URL}/carttwo/${cartId}/items/${itemId}`, {
+        const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/${cartId}/items/${itemId}`, {
             method: 'DELETE'
         });
         if (!response.ok) {
@@ -119,7 +119,7 @@ export const updateItemQuantity = (cartId, itemId, quantity) => async (dispatch)
     }
 
     try {
-        const response = await fetch(`${BASE_URL}/carttwo/${cartId}/items/${itemId}`, {
+        const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/${cartId}/items/${itemId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ quantity })
@@ -151,7 +151,7 @@ export const clearCart = () => {
 export const getAllCarts = () => async (dispatch) => {
     dispatch({ type: carttwoConstants.GET_ALL_CARTS_REQUEST });
     try {
-        const response = await fetch('${BASE_URL}/carttwo/all');
+        const response = await fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/all');
         const data = await response.json();
         if (response.ok) {
             dispatch({ type: carttwoConstants.GET_ALL_CARTS_SUCCESS, payload: data });
@@ -166,7 +166,7 @@ export const getAllCarts = () => async (dispatch) => {
 export const countCarts = () => async (dispatch) => {
     dispatch({ type: carttwoConstants.COUNT_CARTS_REQUEST });
     try {
-        const response = await fetch('${BASE_URL}/carttwo/count');
+        const response = await fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/count');
         const data = await response.json();
         if (response.ok) {
             dispatch({ type: carttwoConstants.COUNT_CARTS_SUCCESS, payload: data.count });
@@ -182,7 +182,7 @@ export const countCarts = () => async (dispatch) => {
 //     console.log('Sending to server:', { productId, quantity });
 //     dispatch({ type: carttwoConstants.ADD_TO_CARTTWO_REQUEST });
 //     try {
-//         const response = await fetch('${BASE_URL}/carttwo/cart/add', {
+//         const response = await fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/cart/add', {
 //             method: 'POST',
 //             headers: { 'Content-Type': 'application/json' },
 //             body: JSON.stringify({ productId, quantity })
@@ -197,7 +197,7 @@ export const countCarts = () => async (dispatch) => {
 // export const getCarttwo = () => async (dispatch) => {
 //     dispatch({ type: carttwoConstants.GET_CARTTWO_REQUEST });
 //     try {
-//         const response = await fetch('${BASE_URL}/carttwo/getCarttwo');
+//         const response = await fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/getCarttwo');
 //         const data = await response.json();
 //         dispatch({ type: carttwoConstants.GET_CARTTWO_SUCCESS, payload: data });
 //     } catch (error) {
@@ -208,7 +208,7 @@ export const countCarts = () => async (dispatch) => {
 //     console.log('Sending to server:', { productId, quantity });
 //     dispatch({ type: carttwoConstants.ADD_TO_CARTTWO_REQUEST });
 //     try {
-//         const response = await fetch('${BASE_URL}/carttwo/cart/add', {
+//         const response = await fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/carttwo/cart/add', {
 //             method: 'POST',
 //             headers: { 'Content-Type': 'application/json' },
 //             body: JSON.stringify({ productId, quantity })

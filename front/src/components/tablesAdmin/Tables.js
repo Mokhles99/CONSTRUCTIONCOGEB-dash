@@ -106,7 +106,7 @@ const Tables = () => {
    
 
         try {
-            const response = await fetch(`${BASE_URL}/product/create`, {
+            const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/product/create`, {
                 method: 'POST',
                 body: formData
             });

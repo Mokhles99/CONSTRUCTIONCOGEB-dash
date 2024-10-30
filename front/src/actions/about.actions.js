@@ -13,7 +13,7 @@ export const createAbout = (aboutData) => (dispatch) => {
     });
   }
 
-  fetch('${BASE_URL}/about/create', {
+  fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/create', {
     method: 'POST',
     body: formData, // Pas besoin de définir 'Content-Type' pour FormData, le navigateur le fera
   })
@@ -32,7 +32,7 @@ export const createAbout = (aboutData) => (dispatch) => {
 // Récupérer tous les produits
 export const getAllAbouts = () => (dispatch) => {
   dispatch({ type: aboutConstants.GET_ALL_ABOUTS_REQUEST });
-  fetch('${BASE_URL}/about/abouts')
+  fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/abouts')
     .then((response) => response.json())
     .then((data) => dispatch({
       type: aboutConstants.GET_ALL_ABOUTS_SUCCESS,
@@ -48,7 +48,7 @@ export const getAllAbouts = () => (dispatch) => {
 export const getAboutById = (id) => async (dispatch) => {
     dispatch({ type: aboutConstants.GET_ABOUT_REQUEST });
     try {
-      const response = await fetch(`${BASE_URL}/about/abouts/${id}`);
+      const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/abouts/${id}`);
       const data = await response.json();
       dispatch({
         type: aboutConstants.GET_ABOUT_SUCCESS,
@@ -78,7 +78,7 @@ export const updateAbout = (id, aboutData) => (dispatch) => {
 
   console.log("FormData to be sent:", Object.fromEntries(formData)); // Display FormData entries
 
-  fetch(`${BASE_URL}/about/update/${id}`, {
+  fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/update/${id}`, {
       method: 'PUT',
       body: formData,
   })
@@ -116,7 +116,7 @@ export const updateAbout = (id, aboutData) => (dispatch) => {
 export const deleteAbout = (id) => (dispatch) => {
     dispatch({ type: aboutConstants.DELETE_ABOUT_REQUEST });
 
-    fetch(`${BASE_URL}/about/delete/${id}`, {
+    fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/delete/${id}`, {
         method: 'DELETE',
     })
     .then(response => {
@@ -146,7 +146,7 @@ export const deleteAbout = (id) => (dispatch) => {
 
 export const countAbouts = () => (dispatch) => {
   dispatch({ type: aboutConstants.COUNT_ABOUTS_REQUEST });
-  fetch('${BASE_URL}/about/count')
+  fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/count')
     .then((response) => response.json())
     .then((data) => dispatch({
       type: aboutConstants.COUNT_ABOUTS_SUCCESS,

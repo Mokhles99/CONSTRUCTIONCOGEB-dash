@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const API_URL = `${BASE_URL}/api/auth/`;
+const API_URL = `https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/api/auth/`;
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {

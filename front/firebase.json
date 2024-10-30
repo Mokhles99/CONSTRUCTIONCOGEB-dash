@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "constrc-dash",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

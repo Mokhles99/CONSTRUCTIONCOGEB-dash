@@ -5,7 +5,7 @@ const BASE_URL = process.env.REACT_APP_BASE_URL;
 export const fetchAllUsers = () => async (dispatch) => {
     dispatch({ type: userConstants.FETCH_USERS_REQUEST });
     try {
-        const response = await axios.get(`${BASE_URL}/api/users`);
+        const response = await axios.get(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/api/users`);
         console.log("Fetched Users:", response.data);  // Log fetched users to the console
         dispatch({ type: userConstants.FETCH_USERS_SUCCESS, payload: response.data });
     } catch (error) {
@@ -18,7 +18,7 @@ export const fetchAllUsers = () => async (dispatch) => {
 export const changeUserRole = (userId, roleId) => async (dispatch) => {
     dispatch({ type: userConstants.CHANGE_USER_ROLE_REQUEST });
     try {
-        const response = await axios.post(`${BASE_URL}/api/user/change-role-by-id`, { userId, roleId });
+        const response = await axios.post(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/api/user/change-role-by-id`, { userId, roleId });
         dispatch({ type: userConstants.CHANGE_USER_ROLE_SUCCESS, payload: response.data });
     } catch (error) {
         dispatch({ type: userConstants.CHANGE_USER_ROLE_FAILURE, payload: error.response.data.message });

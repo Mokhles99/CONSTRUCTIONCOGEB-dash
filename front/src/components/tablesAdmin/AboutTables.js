@@ -16,7 +16,7 @@ import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 const style = {
   position: 'absolute',
   top: '50%',
@@ -68,7 +68,7 @@ const AboutTables = () => {
     aboutFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch('${BASE_URL}/about/create', {
+      const response = await fetch('https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/create', {
         method: 'POST',
         body: formData
       });
@@ -86,7 +86,7 @@ const AboutTables = () => {
     aboutFiles.forEach((file) => formData.append('files', file));
 
     try {
-      const response = await fetch(`${BASE_URL}/about/update/${selectedAboutId}`, {
+      const response = await fetch(`https://us-central1-cogeb-2469c.cloudfunctions.net/api_construction/about/update/${selectedAboutId}`, {
         method: 'PUT',
         body: formData
       });
